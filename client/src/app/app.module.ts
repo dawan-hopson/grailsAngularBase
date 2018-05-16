@@ -1,29 +1,47 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from "@angular/common/http";
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { IndexComponent } from './index/index.component';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { NavService } from './nav/nav.service';
+// import { NavComponent } from './nav/nav.component';
+// import { NavService } from './nav/nav.service';
 import { AppRoutingModule } from "./app-routing.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+// import { MaterialAppModule } from './ngmaterial.module';
+import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatToolbarModule } from '@angular/material';
+import { PropertyComponent } from './property/property.component';
+import { PropertyCreateComponent } from './property-create/property-create.component';
+import { PropertyDetailComponent } from './property-detail/property-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    IndexComponent
+    // NavComponent,
+    IndexComponent,
+    PropertyComponent,
+    PropertyCreateComponent,
+    PropertyDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    // MaterialAppModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatToolbarModule,
+    // MatRipple,
     NgbModule.forRoot()
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, NavService],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

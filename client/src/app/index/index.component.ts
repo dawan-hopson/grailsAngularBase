@@ -14,21 +14,10 @@ export class IndexComponent implements OnInit {
   controllers: Array<any>;
   serverUrl: string;
 
-  constructor(private navService: NavService, private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.serverUrl = environment.serverUrl;
-    this.navService.getNavData().subscribe(applicationData => {
-      this.controllers = applicationData.controllers.sort((a: any, b: any) => {
-        if (a.name < b.name) {
-          return -1;
-        } else if (a.name > b.name) {
-          return 1;
-        } else {
-          return 0;
-        }
-      });
-    });
   }
 
   hasRoute(controllerName: string): boolean {

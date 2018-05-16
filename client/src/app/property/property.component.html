@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Property List</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Address</th>
+      <th>Estimate</th>
+      <th>Beds</th>
+      <th>Baths</th>
+      <th>Sq Ft</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let prop of properties">
+      <td>{{ prop.address }}</td>
+      <td>{{ prop.estimate }}</td>
+      <td>{{ prop.bath }}</td>
+      <td>{{ prop.beth }}</td>
+      <td>{{ prop.sqft }}</td>
+      <td><a href="/show/{{prop.id}}">Show Detail</a></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+<a [routerLink]="['/property-create']" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</a>
