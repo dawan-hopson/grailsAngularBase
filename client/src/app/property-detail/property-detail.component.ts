@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-property-detail',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyDetailComponent implements OnInit {
 
-  constructor() { }
+    property = {};
 
-  ngOnInit() {
-  }
+    constructor(private route: ActivatedRoute, private http: HttpClient) { }
+
+    ngOnInit() {
+        this.getCustomerDetail(this.route.snapshot.params['id']);
+    }
+
+    getCustomerDetail(id) {
+        this.http.get('http://localhost:8080/property/'+id).subscribe(data => {
+            this.property = data;
+        });
+    }
 
 }

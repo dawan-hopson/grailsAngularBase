@@ -1,3 +1,15 @@
-<p>
-  property-detail works!
-</p>
+<div class="container">
+  <h1>{{ property.address }}</h1>
+  <dl class="list">
+    <dt>Address</dt>
+    <dd>{{ property.address }}</dd>
+    <dt>Estimate</dt>
+    <dd>{{ property.estimate }}</dd>
+    <dt>Bed(s)</dt>
+    <dd>{{ property.bed }}</dd>
+    <dt>Bath(s)</dt>
+    <dd>{{ property.bath }}</dd>
+    <dt>Square Feet</dt>
+    <dd>{{ property.sqft }}</dd>
+  </dl>
+</div>

@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path: 'properties', component: PropertyComponent , data: { title: 'Property List'}},
   {path: 'property-create', component: PropertyCreateComponent , data: { title: 'Add Property'}},
-  {path: 'property-detail', component: PropertyDetailComponent , data: { title: 'Property Details'}},
+  {path: 'property-detail/:id', component: PropertyDetailComponent , data: { title: 'Property Details'}},
   {path: 'index', component: IndexComponent}
 ];
 

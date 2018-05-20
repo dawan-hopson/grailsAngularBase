@@ -11,12 +11,15 @@ class Property {
     String bath
     String sqft
 
+    static hasMany = [propertyTypes: PropertyType]
+
     static constraints = {
         address blank:false
         estimate blank:false
         bed blank:false
         bath blank:false
         sqft blank:false
+        propertyTypes display: false
     }
 
 }
