@@ -31,7 +31,7 @@ export class PropertyCreateComponent implements OnInit {
     this.http.post('http://localhost:8080/property', this.property)
         .subscribe(res => {
           let id = res['id'];
-          this.router.navigate(['/property-detail/', id]);
+          this.router.navigate(['/property-details/', id]);
 
         }, (err) => {
           console.log(err);

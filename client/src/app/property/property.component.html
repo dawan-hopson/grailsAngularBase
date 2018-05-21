@@ -18,7 +18,7 @@
       <td>{{ prop.bath }}</td>
       <td>{{ prop.beth }}</td>
       <td>{{ prop.sqft }}</td>
-      <td><a href="/show/{{prop.id}}">Show Detail</a></td>
+      <td><a [routerLink]="['/property-edit', prop.id]" class="btn btn-success">EDIT</a></td>
     </tr>
     </tbody>
   </table>

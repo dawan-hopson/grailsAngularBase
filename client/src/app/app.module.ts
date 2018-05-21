@@ -15,6 +15,7 @@ import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatToolba
 import { PropertyComponent } from './property/property.component';
 import { PropertyCreateComponent } from './property-create/property-create.component';
 import { PropertyDetailComponent } from './property-detail/property-detail.component';
+import { PropertyEditComponent } from './property-edit/property-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PropertyDetailComponent } from './property-detail/property-detail.compo
     IndexComponent,
     PropertyComponent,
     PropertyCreateComponent,
-    PropertyDetailComponent
+    PropertyDetailComponent,
+    PropertyEditComponent
   ],
   imports: [
     BrowserModule,

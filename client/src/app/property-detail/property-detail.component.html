@@ -12,4 +12,14 @@
     <dt>Square Feet</dt>
     <dd>{{ property.sqft }}</dd>
   </dl>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/property-edit', property.id]" class="btn btn-success">EDIT</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-danger" type="button" (click)="deleteProperty(property.id)">DELETE</button>
+    </div>
+  </div>
 </div>
