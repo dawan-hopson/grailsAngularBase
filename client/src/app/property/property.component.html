@@ -5,8 +5,8 @@
     <tr>
       <th>Address</th>
       <th>Estimate</th>
-      <th>Beds</th>
       <th>Baths</th>
+      <th>Beds</th>
       <th>Sq Ft</th>
       <th>Action</th>
     </tr>
@@ -16,7 +16,7 @@
       <td>{{ prop.address }}</td>
       <td>{{ prop.estimate }}</td>
       <td>{{ prop.bath }}</td>
-      <td>{{ prop.beth }}</td>
+      <td>{{ prop.bed }}</td>
       <td>{{ prop.sqft }}</td>
       <td><a [routerLink]="['/property-edit', prop.id]" class="btn btn-success">EDIT</a></td>
     </tr>
@@ -24,6 +24,8 @@
   </table>
 
 </div>
-<a [routerLink]="['/property-create']" class="btn btn-default btn-lg">
-  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</a>
+<div>
+  <a type="button" [routerLink]="['/property-create']" class="btn btn-default btn-lg"> Create New
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </a>
+</div>
